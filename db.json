@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "email": "testing@gmail.com",
+      "password": "$2a$10$gnJWBpxt4mJuUgQS0ZVBWO1/xnKu9NKt5xO5eUGLYXof4GkXcF3q2",
+      "id": 1
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "aaaa"
+    }
+  ]
+}

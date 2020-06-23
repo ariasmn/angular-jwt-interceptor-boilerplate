@@ -1,27 +1,23 @@
-# AngularJwtInterceptor
+# angular-jwt-interceptor boilerplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+This boilerplate is meant to be used as a guide on how to make a correct implementation of the interceptor in a JWT Server. **This should not be used as it is in a production environment.**
 
-## Development server
+## Important files
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The files you should check as a guide are: 
+- **auth.service.ts**: This file contains the code to get, store and refresh the token. In this case, there is no refesh method in the backend, so we login again with the user.
+- **auth-interceptor.service.ts**: The interceptor itself. Contains the functions to check if the token is valid before sending the request.
 
-## Code scaffolding
+## How to run
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+For the testing API REST, [json-server](https://github.com/typicode/json-server) has been used with [json-server-auth](https://github.com/jeremyben/json-server-auth) as the JWT Middleware.
 
-## Build
+I recommend to install both of them globally (that's why those packages are not included withing the `package.json`).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+To run the server once installed both packages do: 
 
-## Running unit tests
+    json-server-auth db.json -r routes.json
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To run the Angular application, just do `ng serve`.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If you want to, you can modify the `db.json` and `routes.json`, as well as the credentials in the authentication service, to suit your needs.

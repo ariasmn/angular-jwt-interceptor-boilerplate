@@ -12,7 +12,7 @@ The files you should check as a guide are:
 
 For the testing API REST, [json-server](https://github.com/typicode/json-server) has been used with [json-server-auth](https://github.com/jeremyben/json-server-auth) as the JWT Middleware.
 
-I recommend to install both of them globally (that's why those packages are not included withing the `package.json`).
+I recommend to install both of them globally (that's why those packages are not included within the `package.json`).
 
 To run the server once installed both packages do: 
 
